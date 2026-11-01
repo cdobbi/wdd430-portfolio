@@ -8,7 +8,7 @@ export default async function Footer() {
             <div className="container mx-auto text-center">
                 <p>
                     Copyright &copy; {new Date().getFullYear()} | Christina Dobbins |
-                    All rights reserved
+                    All rights reserved<br />Built with Next.js and Tailwind CSS.
                 </p>
             </div>
         </footer>
