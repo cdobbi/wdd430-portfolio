@@ -19,7 +19,7 @@ const projects = [
         title: "Rhinelander Rabbitry",
         description:
             "",
-        technologies: ["needs completion"],
+        technologies: [""],
         link: "https://www.rhinelander-rabbitry.com/",
     },
     {
@@ -30,23 +30,23 @@ const projects = [
         link: "https://www.aquiltingcreation.com/",
     },
         {
-        title: "Time for SLime!",
+        title: "Time for Slime",
         description:
-            "Needs completion",
+            "",
         technologies: [""],
-        link: "https://cdobbi.github.io/Rabbit-Savvy/",
+        link: "https://cdobbi.github.io/time4slime/",
     },
     {
         title: "Tag Track",
         description:
             "An interactive prototype for managing junior-livestock tagging and eligibility records in Utah.",
-        technologies: ["needs completion"],
+        technologies: [""],
         link: "https://github.com/cdobbi/TagTrack/",
     },
     {
         title: "A Quilting Creation",
         description:
-            "Needs completion",
+            "",
         technologies: ["JavaScript", "Capacitor"],
         link: "https://www.aquiltingcreation.com/",
     },
