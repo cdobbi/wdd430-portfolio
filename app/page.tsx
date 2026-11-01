@@ -15,6 +15,41 @@ const projects = [
         technologies: ["JavaScript", "Capacitor"],
         link: "https://cdobbi.github.io/Rabbit-Savvy/",
     },
+    {
+        title: "Rhinelander Rabbitry",
+        description:
+            "",
+        technologies: ["needs completion"],
+        link: "https://www.rhinelander-rabbitry.com/",
+    },
+    {
+        title: "A Quilting Creation",
+        description:
+            "",
+        technologies: [""],
+        link: "https://www.aquiltingcreation.com/",
+    },
+        {
+        title: "Time for SLime!",
+        description:
+            "Needs completion",
+        technologies: [""],
+        link: "https://cdobbi.github.io/Rabbit-Savvy/",
+    },
+    {
+        title: "Tag Track",
+        description:
+            "An interactive prototype for managing junior-livestock tagging and eligibility records in Utah.",
+        technologies: ["needs completion"],
+        link: "https://github.com/cdobbi/TagTrack/",
+    },
+    {
+        title: "A Quilting Creation",
+        description:
+            "Needs completion",
+        technologies: ["JavaScript", "Capacitor"],
+        link: "https://www.aquiltingcreation.com/",
+    },
 ];
 
 export default function Home() {
