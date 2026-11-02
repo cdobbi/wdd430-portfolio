@@ -4,7 +4,7 @@ export default async function Footer() {
     await connection();
 
     return (
-        <footer className="bg-gray-800 text-white py-4 mt-12">
+        <footer className="border-t-5 border-[#f18a72] bg-gray-800 text-white py-4 mt-12">
             <div className="container mx-auto text-center">
                 <p>
                     Copyright &copy; {new Date().getFullYear()} | Christina Dobbins |
