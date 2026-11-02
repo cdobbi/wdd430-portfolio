@@ -13,3 +13,5 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
         </section>
     );
 } 
+
+
