@@ -2,53 +2,32 @@ import ProjectList from "@/components/ProjectList";
 
 const projects = [
     {
-        title: "Warren Ledger",
-        description:
-            "A rabbitry management application that helps breeders organize rabbits, breedings, litters, pedigrees, and reminders.",
-        technologies: ["Vite"],
-        link: "https://www.warren-ledger.com/",
-    },
-    {
         title: "Rabbit Savvy",
         description:
             "An offline study companion that helps rabbit exhibitors and breeders practice their knowledge.",
-        technologies: ["JavaScript", "Capacitor"],
+        technologies: ["HTML, CSS, JavaScript & Capacitor & Node.js, No backend"],
         link: "https://cdobbi.github.io/Rabbit-Savvy/",
     },
     {
         title: "Rhinelander Rabbitry",
         description:
-            "",
-        technologies: [""],
+            "A Rabbitry website for showcasing and managing rabbit breeding and links to rabbit information.",
+        technologies: ["HTML, CSS, JavaScript & No middle tier & PHP"],
         link: "https://www.rhinelander-rabbitry.com/",
     },
     {
         title: "A Quilting Creation",
         description:
-            "",
-        technologies: [""],
+            "A website showcasing quilting projects and services.",
+        technologies: ["HTML, CSS, JavaScript , Bootstrap & JSON & PHP"],
         link: "https://www.aquiltingcreation.com/",
     },
-        {
+    {
         title: "Time for Slime",
         description:
-            "",
-        technologies: [""],
+            "A website for creating and sharing slime recipes and tutorials.",
+        technologies: ["HTML, CSS, Javascript & No middle tier or backend"],
         link: "https://cdobbi.github.io/time4slime/",
-    },
-    {
-        title: "Tag Track",
-        description:
-            "An interactive prototype for managing junior-livestock tagging and eligibility records in Utah.",
-        technologies: [""],
-        link: "https://github.com/cdobbi/TagTrack/",
-    },
-    {
-        title: "A Quilting Creation",
-        description:
-            "",
-        technologies: ["JavaScript", "Capacitor"],
-        link: "https://www.aquiltingcreation.com/",
     },
 ];
 
