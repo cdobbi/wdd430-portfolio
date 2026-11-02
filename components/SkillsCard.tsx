@@ -4,14 +4,13 @@ interface SkillsCardProps {
 
 export default function SkillsCard({ skills }: SkillsCardProps) {
     return (
-        <section className="mt-8 rounded-lg bg-white p-4 text-center text-gray-900">
-            {skills.map((skill, index) => (
-                <span key={index} className="inline-block mr-2 mb-2 rounded bg-gray-200 px-2 py-1">
+        <section aria-label="Skills" className="mt-6 flex flex-wrap gap-2">
+            {skills.map((skill) => (
+                <span key={skill} className="rounded border border-[#397695] bg-[#245f7e] px-3 py-1 text-sm font-semibold text-white">
                     {skill}
                 </span>
             ))}
         </section>
     );
-} 
-
+}
 
