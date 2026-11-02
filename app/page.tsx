@@ -25,7 +25,7 @@ const projects = [
     {
         title: "Time for Slime",
         description:
-            "A website for creating and sharing slime recipes and tutorials.",
+            "A website to purchase slime.",
         technologies: ["HTML, CSS, Javascript & No middle tier or backend"],
         link: "https://cdobbi.github.io/time4slime/",
     },
