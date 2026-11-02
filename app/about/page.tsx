@@ -26,7 +26,7 @@ export default function About() {
                     </div>
                     <SkillsCard skills={["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript"]} />
                 </div>
-                <div className="relative aspect-[403/437] border-t-4 border-[#f18a72] md:aspect-auto md:min-h-full md:border-t-0 md:border-l-4">
+                <div className="relative aspect-403/437 border-t-4 border-[#f18a72] md:aspect-auto md:min-h-full md:border-t-0 md:border-l-4">
                     <Image
                         src="/rabbit-portrait.png"
                         alt="A white rabbit in a red, ornate outfit"
