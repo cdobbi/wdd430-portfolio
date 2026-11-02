@@ -24,7 +24,7 @@ export default function About() {
                             uploads and document storage.
                         </p>
                     </div>
-                    <SkillsCard skills={["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript"]} />
+                    <SkillsCard skills={["HTML", "CSS", "JavaScript", "React", "Python", "C#", "SQL and PostgreSQL", "PHP", "Node.js", "Express", "MongoDB", "Git", "Github", "REST APIs", "Responsive web design", "OOP", "Data Structures", "Software Testing", "Bootstrap", "JSON", "currently learning Next.js & TypeScript"]} />
                 </div>
                 <div className="relative aspect-403/437 border-t-4 border-[#f18a72] md:aspect-auto md:min-h-full md:border-t-0 md:border-l-4">
                     <Image
