@@ -15,9 +15,11 @@ export default function ProjectCard({
         <article className="p-4 border-l-5 border-[#173b55] bg-gray-50 rounded hover:shadow-lg">
             <h3 className="text-xl font-bold mb-2">{title}</h3>
             <p className="text-gray-700 mb-3">{description}</p>
-            <p className="text-sm text-gray-600">
-                <strong>Technologies:</strong> {technologies.join(", ")}
-            </p>
+            {technologies.length > 0 && (
+                <p className="text-sm text-gray-600">
+                    <strong>Technologies:</strong> {technologies.join(", ")}
+                </p>
+            )}
             {link && (
                 <p className="mt-2">
                     <a

@@ -4,7 +4,7 @@ export interface Project {
     id: number;
     title: string;
     description: string;
-    type: 'opensource' | 'school';
+    type: 'opensource' | 'school' | 'personal' | 'probono';
     technologies: string[];
     link?: string;
 }
