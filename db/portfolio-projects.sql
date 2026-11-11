@@ -21,6 +21,8 @@ FROM (VALUES
      ARRAY['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'JSON', 'PHP'], 'https://www.aquiltingcreation.com/'),
     ('Grand Tetons', 'A community website featuring local events and the Teton Chamber of Commerce.', 'school',
      ARRAY[]::text[], 'https://cdobbi.github.io/cse270-teton/'),
+    ('Time for Slime', 'A website showcasing slime products.', 'personal',
+     ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/time4slime/'),
     ('Tag Track', 'A pro bono project for 4-H.', 'probono',
      ARRAY[]::text[], NULL::text)
 ) AS additions(title, description, type, technologies, link)
