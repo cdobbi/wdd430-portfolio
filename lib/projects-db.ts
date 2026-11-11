@@ -35,11 +35,11 @@ function toProject(row: ProjectRow): Project {
 export async function getProjects(type?: string | null): Promise<Project[]> {
     const result = type
         ? await getPool().query<ProjectRow>(
-            'SELECT id, title, description, type, technologies, link FROM projects WHERE type = $1 ORDER BY id',
+            'SELECT id, title, description, type, technologies, link FROM projects WHERE type = $1 ORDER BY COALESCE(sort_order, id::bigint * 10), id',
             [type]
         )
         : await getPool().query<ProjectRow>(
-            'SELECT id, title, description, type, technologies, link FROM projects ORDER BY id'
+            'SELECT id, title, description, type, technologies, link FROM projects ORDER BY COALESCE(sort_order, id::bigint * 10), id'
         );
     return result.rows.map(toProject);
 }
@@ -65,7 +65,7 @@ export async function fetchFilteredProjects(query: string, page: number): Promis
     const result = await getPool().query<ProjectRow>(
         `SELECT id, title, description, type, technologies, link FROM projects
          WHERE ${searchCondition}
-         ORDER BY id LIMIT $2 OFFSET $3`,
+         ORDER BY COALESCE(sort_order, id::bigint * 10), id LIMIT $2 OFFSET $3`,
         [query, PROJECTS_PER_PAGE, (page - 1) * PROJECTS_PER_PAGE]
     );
     return result.rows.map(toProject);
