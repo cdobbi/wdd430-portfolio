@@ -23,6 +23,14 @@ FROM (VALUES
      ARRAY[]::text[], 'https://cdobbi.github.io/cse270-teton/'),
     ('Time for Slime', 'A website showcasing slime products.', 'personal',
      ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/time4slime/'),
+    ('WDD 131 About Me', 'A personal introduction page created for a web fundamentals course.', 'school',
+     ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/index.html'),
+    ('Temple Gallery', 'A gallery of temples built for a web development course.', 'school',
+     ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/filtered-temples.html'),
+    ('Rabbit Breed Review', 'A form for reviewing rabbit breeds.', 'school',
+     ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/form.html'),
+    ('Explore England', 'A page presenting facts about England.', 'school',
+     ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/place.html'),
     ('Tag Track', 'A pro bono project for 4-H.', 'probono',
      ARRAY[]::text[], NULL::text)
 ) AS additions(title, description, type, technologies, link)
