@@ -8,7 +8,7 @@ export async function GET(
     if (!/^\d+$/.test(id) || !Number.isSafeInteger(projectId) || projectId < 1) {
         return Response.json({ error: 'Invalid project ID' }, { status: 400 });
     }
-    const project = getProjectById(projectId);
+    const project = await getProjectById(projectId);
     if (!project) {
         return new Response('Project not found', { status: 404 });
     }
