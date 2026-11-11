@@ -23,6 +23,8 @@ FROM (VALUES
      ARRAY[]::text[], 'https://cdobbi.github.io/cse270-teton/'),
     ('Time for Slime', 'A website showcasing slime products.', 'personal',
      ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/time4slime/'),
+    ('Little Time Machine', 'A class time converter for different time zones and daylight saving changes.', 'personal',
+     ARRAY['Next.js', 'TypeScript'], 'https://whatsthetime-e0j8.onrender.com/'),
     ('WDD 131 About Me', 'A personal introduction page created for a web fundamentals course.', 'school',
      ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/index.html'),
     ('Temple Gallery', 'A gallery of temples built for a web development course.', 'school',
