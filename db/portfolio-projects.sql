@@ -11,8 +11,6 @@ FROM (VALUES
      ARRAY[]::text[], NULL::text),
     ('Rabbit Savvy', 'An offline study companion for rabbit exhibitors and breeders.', 'personal',
      ARRAY['HTML', 'CSS', 'JavaScript', 'Capacitor', 'Node.js'], 'https://cdobbi.github.io/Rabbit-Savvy/'),
-    -- ('Rabbit Club Hub', 'A demo for a rabbit club hub.', 'personal',
-    --  ARRAY[]::text[], 'https://cdobbi.github.io/rabbitclubhub-demo/'),
     ('Sacrament Meeting Planner', 'A school project for viewing and printing meeting programs.', 'school',
      ARRAY['Next.js', 'TypeScript', 'Tailwind'], 'https://sacrament-meetings.onrender.com/'),
     ('Rhinelander Rabbitry', 'A school project showcasing rabbit breeding and information.', 'school',
@@ -33,7 +31,6 @@ FROM (VALUES
      ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/form.html'),
     ('Explore England', 'A page presenting facts about England.', 'school',
     --  ARRAY['HTML', 'CSS', 'JavaScript'], 'https://cdobbi.github.io/wdd131/place.html'),
-    -- ('Tag Track', 'A pro bono project for 4-H.', 'probono',
      ARRAY[]::text[], NULL::text)
 ) AS additions(title, description, type, technologies, link)
 WHERE NOT EXISTS (SELECT 1 FROM public.projects WHERE projects.title = additions.title);
