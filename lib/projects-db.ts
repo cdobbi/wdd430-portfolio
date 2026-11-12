@@ -15,6 +15,8 @@ interface ProjectRow extends Omit<Project, 'link'> {
 
 export const PROJECTS_PER_PAGE = 6;
 
+const visibleProjectsCondition = "title NOT IN ('Tag Track', 'Warren Ledger', 'Rabbit Club Hub')";
+
 let pool: Pool | undefined;
 
 function getPool(): Pool {
@@ -35,11 +37,11 @@ function toProject(row: ProjectRow): Project {
 export async function getProjects(type?: string | null): Promise<Project[]> {
     const result = type
         ? await getPool().query<ProjectRow>(
-            'SELECT id, title, description, type, technologies, link FROM projects WHERE type = $1 ORDER BY COALESCE(sort_order, id::bigint * 10), id',
+            `SELECT id, title, description, type, technologies, link FROM projects WHERE ${visibleProjectsCondition} AND type = $1 ORDER BY COALESCE(sort_order, id::bigint * 10), id`,
             [type]
         )
         : await getPool().query<ProjectRow>(
-            'SELECT id, title, description, type, technologies, link FROM projects ORDER BY COALESCE(sort_order, id::bigint * 10), id'
+            `SELECT id, title, description, type, technologies, link FROM projects WHERE ${visibleProjectsCondition} ORDER BY COALESCE(sort_order, id::bigint * 10), id`
         );
     return result.rows.map(toProject);
 }
@@ -64,7 +66,7 @@ const searchCondition = `
 export async function fetchFilteredProjects(query: string, page: number): Promise<Project[]> {
     const result = await getPool().query<ProjectRow>(
         `SELECT id, title, description, type, technologies, link FROM projects
-         WHERE ${searchCondition}
+         WHERE ${visibleProjectsCondition} AND (${searchCondition})
          ORDER BY COALESCE(sort_order, id::bigint * 10), id LIMIT $2 OFFSET $3`,
         [query, PROJECTS_PER_PAGE, (page - 1) * PROJECTS_PER_PAGE]
     );
@@ -73,7 +75,7 @@ export async function fetchFilteredProjects(query: string, page: number): Promis
 
 export async function fetchProjectsPages(query: string): Promise<number> {
     const result = await getPool().query<{ count: string }>(
-        `SELECT count(*) FROM projects WHERE ${searchCondition}`,
+        `SELECT count(*) FROM projects WHERE ${visibleProjectsCondition} AND (${searchCondition})`,
         [query]
     );
     return Math.ceil(Number(result.rows[0].count) / PROJECTS_PER_PAGE);
